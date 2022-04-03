@@ -1,0 +1,81 @@
+<section class="center">
+
+<input type="text" class="form-control middle add-data"
+(keyup.enter)="addData(title)"
+#title placeholder="To add title"
+id="dataAdd"
+>
+
+<div class="input-group middle">
+    
+    <input type="text" class="form-control " placeholder="search"
+    name="search"
+    [(ngModel)]="searchText"
+    ngModel
+    autocomplete="on">
+    
+</div>
+
+
+
+<table >
+    <tr class="text-center">
+    <th>Id</th>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Update Title</th>
+    <th></th>
+</tr>
+    <tr *ngFor="let i of data | filter:searchText">
+        <td>
+            {{i.id}}
+        </td>
+        <td class="td-title">
+            {{i.title}}
+        </td>
+        <td class="td-body">
+            {{i.body}}
+        </td>
+        <td class="td-update">
+            <input type="text" name="updateTitle" 
+            #updatTitle
+            (keyup.enter)="updateTitle(updatTitle)"
+            class="form-control">
+        </td>
+
+        <td class="td-delete">
+            <button type="button" class="btn btn-dark"
+            (click)="deleteRow(i)"
+            >Delete</button>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="text-center">
+        <th>Brands</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor="let i of listData"> 
+        <td>
+            {{i}}
+        </td>
+
+        <td class="td-update">
+            <input type="text" name="updatBrand" 
+            #updatBrand
+            (keyup.enter)="updateBrand(updatBrand, i)"
+            class="form-control">
+        </td>
+
+        <td class="td-delete">
+            <button type="button" class="btn btn-dark"
+            (click)="deleteBrand(i)"
+            >Delete</button>
+        </td>
+        
+    </tr>
+</table>
+
+</section>

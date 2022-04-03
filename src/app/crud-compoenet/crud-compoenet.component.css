@@ -1,0 +1,53 @@
+.td-body {
+    width: 500px;
+    
+}
+
+.td-title {
+    width: 300px;
+    padding: 2%;
+}
+.td-update {
+    width: 200px;
+    
+}
+
+.td-delete {
+    padding: 0;
+}
+
+td{
+    padding: 1.5%;
+}
+th {
+    background-color: aqua;
+    
+    
+}
+table{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.center {
+    margin: 30px;
+    padding: 2%;
+    /* border: 1px solid black; */
+}
+
+.middle{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+ul {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
