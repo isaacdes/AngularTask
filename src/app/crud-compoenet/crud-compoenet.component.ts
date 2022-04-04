@@ -29,8 +29,8 @@ export class CrudCompoenetComponent implements OnInit {
       this.data = response;
       this.data.splice(5);
     });
-
     this.listData = this.dataServices.getData();
+    
   }
 
   deleteRow(row: any){
@@ -47,7 +47,7 @@ export class CrudCompoenetComponent implements OnInit {
     });
     
 
-    this.dataServices.addData(item.title);
+    
    
   }
 
@@ -60,6 +60,12 @@ export class CrudCompoenetComponent implements OnInit {
 
 
   // ListData
+
+  addDataBrand(input: HTMLInputElement) {
+    let item = {title: input.value};
+    this.dataServices.addData(item.title);
+  }
+
   updateBrand(input: HTMLInputElement, item: any) {
     let index = this.listData.indexOf(item);
     this.dataServices.updateData(input.value,index);
